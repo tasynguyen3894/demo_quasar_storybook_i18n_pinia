@@ -31,7 +31,7 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
       'i18n',
-      
+      'unocss'
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -90,7 +90,8 @@ module.exports = configure(function (/* ctx */) {
 
           // you need to set i18n resource including paths !
           include: path.resolve(__dirname, './src/i18n/**')
-        }]
+        }],
+        ['unocss/vite', {}]
       ]
     },
 

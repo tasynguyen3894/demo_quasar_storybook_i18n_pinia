@@ -7,6 +7,7 @@ import '@quasar/extras/animate/fadeInRight.css';
 import '@quasar/extras/animate/fadeOutRight.css';
 
 import 'quasar/dist/quasar.css';
+import 'uno.css';
 
 import type { Preview } from '@storybook/vue3';
 import { setup } from '@storybook/vue3';

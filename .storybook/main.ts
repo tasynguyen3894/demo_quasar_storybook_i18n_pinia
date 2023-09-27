@@ -1,5 +1,6 @@
 import type { StorybookConfig } from '@storybook/vue3-vite';
 import path from 'path';
+import UnoCSS from 'unocss/vite'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -21,6 +22,9 @@ const config: StorybookConfig = {
         ...config.resolve.alias,
         'src': path.resolve(__dirname, "../src"),
       };
+    }
+    if(config.plugins) {
+      config.plugins.push(UnoCSS());
     }
     return config;
   },
