@@ -13,10 +13,14 @@ import { setup } from '@storybook/vue3';
 import { i18n } from '../src/boot/i18n';
 import { createPinia } from 'pinia';
 
-import { Quasar } from 'quasar';
+import { Quasar, Notify } from 'quasar';
 
 setup((app) => {
-  app.use(Quasar, {});
+  app.use(Quasar, {
+    plugins: {
+      Notify
+    }
+  });
   app.use(i18n);
   app.use(createPinia());
 });
